@@ -16,7 +16,7 @@ def hello():
 def predict():
     if lr:
         try:
-            json_ = request.json
+            json_ = request.get_json(force=True)
             print(json_)
             query = pd.get_dummies(pd.DataFrame(json_))
             query = query.reindex(columns=model_columns, fill_value=0)
