@@ -36,6 +36,7 @@ y_hat = 'Survived'
 x = df_ohe[df_ohe.columns.difference([y_hat])]
 y = df_ohe[y_hat]
 lr = LogisticRegression()
-lr.fit(x, y) 
+lr.fit(x, y)
 
-
+# Serializar el modelo
+joblib.dump(lr, 'model.pkl')
