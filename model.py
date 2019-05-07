@@ -40,3 +40,5 @@ lr.fit(x, y)
 
 # Serializar el modelo
 joblib.dump(lr, 'model.pkl')
+model_columns = list(x.columns)
+joblib.dump(model_columns, "model_columns.pkl")
