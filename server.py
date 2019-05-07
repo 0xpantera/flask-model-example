@@ -40,5 +40,7 @@ if __name__ == "__main__":
         port = 12345
 
     lr = joblib.load("model.pkl")
+    print("Modelo cargado")
     model_columns = joblib.load("model_columns.pkl")
+    print("Columnas del modelo cargadas")
     app.run(port=port, debug=True)
